@@ -48,6 +48,7 @@ dependencies = [
     "markdownify>=1.2.0",
     "python-docx>=1.2.0",
     "browser-use-sdk>=2.0.12",
+    "langchain-core>=1.2.14",
 ]
 # google-api-core: only used for Google LLM APIs
 # pyperclip: only used for examples that use copy/paste
@@ -211,7 +212,9 @@ allow-direct-references = true
 #     "sys_platform == 'win32' and platform_machine == 'x86_64'",
 #     # "sys_platform == 'win32' and platform_machine == 'arm64'",  # no pytorch wheels available yet
 # ]
-dev-dependencies = [
+
+[dependency-groups]
+dev = [
     "ruff>=0.11.2",
     "tokencost>=0.1.16",
     "build>=1.2.2",
